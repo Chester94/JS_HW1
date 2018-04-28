@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Виселица</title>
+
+    <style>
+        .default {
+            margin: auto;
+            text-align: center;
+        }
+
+        .letter {
+            display: inline-block;
+            text-align: center;
+            border-bottom: 3px black solid;
+            margin: 5px;
+            padding: 5px;
+            font-size: 50;
+            width: 50px;
+            height: 50px;
+            vertical-align: top;
+        }
+
+        .letter-button {
+            text-align: center;
+            border: 2px dodgerblue solid;
+            margin: 2px;
+            font-size: 15;
+            width: 33px;
+            height: 33px;
+            border-radius: 10px;
+            background-color: cornflowerblue;
+        }
+
+        .letter-button:hover {
+            background-color: yellow;
+        }
+
+        .letter-button:disabled {
+            color: black;
+            background-color: gray;
+        }
+
+        .letter-button.tip-right {
+            background-color: lightgreen;
+        }
+
+        .letter-button.tip-wrong {
+            background-color: pink;
+        }
+
+        .statistic {
+            font-size: 25;
+            border: 2px black solid;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 25px;
+            text-align: left
+        }
+
+        .cheatButton {
+            position: absolute;
+            left: calc(100% - 110px);
+            top: 10px;
+            width: 100px;
+            height: 25px;
+            border: 2px dodgerblue solid;
+            border-radius: 10px;
+        }
+
+        .cheatButton.on {
+            background-color: lightgreen;
+        }
+
+        .cheatButton.off {
+            background-color: pink;
+        }
+
+    </style>
+
+    <body style="background-color: azure">
+        <button id='cheatButton' class="cheatButton">Читы</button>
+
+        <div class="default" style="margin-top: 50px">
+            <div id='gameResult' style="font-size: 30; min-height: 35px"></div>
+            <div id='timeToRestart' style="font-size: 20; min-height: 25px"></div>
+        </div>
+
+        <div class="default" style="margin-top: 50px">
+            <div id='guess-word' style="display: inline-block;"></div>
+        </div>
+
+        <div class="default" style="margin-top: 100px">
+            <div id='letter-buttons' style="display: inline-block;"></div>
+        </div>
+
+        <div class="default" style="margin-top: 100px">
+            <fieldset class='statistic'>
+                <legend>Статистика</legend>
+                <div>
+                    <div style="display: inline-block">Всего букв в слове: </div>
+                    <div id='letterCountInWord' style="display: inline-block"></div>
+                </div>
+                <div>
+                    <div style="display: inline-block">Всего букв угадано: </div>
+                    <div id='successCount' style="display: inline-block"></div>
+                </div>
+                <div>
+                    <div style="display: inline-block">Всего ошибок: </div>
+                    <div id='errorCount' style="display: inline-block"></div>
+                </div>
+                <div>
+                    <div style="display: inline-block">Максимум ошибок: </div>
+                    <div id='maxErrorCount' style="display: inline-block"></div>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+
+    <script src="./script.js"></script>
+</head>
+</html>
