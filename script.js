@@ -211,10 +211,6 @@ function getWords() {
     return ['Машина', 'Катафалк', 'Сено', 'Альпака', 'Баня', 'Ватман', 'Лизоблюд', 'Архив', 'Ересь']
 }
 
-function getRandom() {
-  return Math.random();
-}
-
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
